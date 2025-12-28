@@ -1,13 +1,12 @@
 // outputNode.js
 
 import { useState } from 'react';
-import { Handle, Position } from 'reactflow';
+import { Position } from 'reactflow';
 import { BaseNode } from './BaseNode';
 import {TextInput} from '../components/inputs/TextInput'
 
 export const OutputNode = ({ id, data }) => {
-  console.log("Inside output node: ", id,data)
-  const [currName, setCurrName] = useState(data?.outputName || id.replace('customOutput-', 'output_'));
+   const [currName, setCurrName] = useState(data?.outputName || id.replace('customOutput-', 'output_'));
   const [outputType, setOutputType] = useState(data.outputType || 'Text');
 
   const handleNameChange = (e) => {
@@ -19,7 +18,7 @@ export const OutputNode = ({ id, data }) => {
   };
 
   const handles = [
-    {type:'target',position:Position.Left, id:`${id}-response`},
+    {type:'target',position:Position.Left, id:`${id}-output-response`},
      
   ]
 

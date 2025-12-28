@@ -6,7 +6,7 @@ import { TextInput } from '../components/inputs/TextInput';
  
 
 export const InputNode = ({ id, data }) => {
-  const [currName, setCurrName] = useState(data?.inputName || id.replace('customInput-', 'input_'));
+   
   const [inputType, setInputType] = useState(data.inputType || 'Text');
 
   const handles = [

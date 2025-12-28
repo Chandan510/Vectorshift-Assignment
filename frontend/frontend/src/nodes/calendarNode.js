@@ -7,7 +7,7 @@ export const CalendarNode = ({ id, data }) => {
   const [value,setValue] = useState('')
 
   const handles = [
-    { type: 'source', position: Position.Right, id: `${id}-docParser` },
+    { type: 'source', position: Position.Right, id: `${id}-calendarData` },
 
   ]
 
